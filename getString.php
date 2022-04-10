@@ -4,7 +4,7 @@ class Reply
 }
 $reply = new Reply();
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    if (isset($_GET['key']) && !empty($_GET['key']) && isset($_GET['token']) && !empty($_GET['token'])) {
+    if (isset($_GET['key']) && isset($_GET['token']) && !empty($_GET['token'])) {
         require_once "config.php";
         $token = $_GET['token'];
         $key = $_GET['key'];
